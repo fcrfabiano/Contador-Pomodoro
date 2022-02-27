@@ -7,10 +7,14 @@ function App() {
   const seconds = secondsAmount % 60;
 
   useEffect(() => {
+    if(secondsAmount === 0) {
+      alert('Tempo chegou ao fim!!!');
+      return;
+    }
+
     setTimeout(() => {
       setSecondsAmount(prevState => prevState - 1);
     }, 1000);
-    
   }, [secondsAmount]);
 
   return (
