@@ -7,7 +7,10 @@ function App() {
   const seconds = secondsAmount % 60;
 
   useEffect(() => {
-    setSecondsAmount(prevState => prevState - 1);
+    setTimeout(() => {
+      setSecondsAmount(prevState => prevState - 1);
+    }, 1000);
+    
   }, [secondsAmount]);
 
   return (
