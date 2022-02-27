@@ -16,9 +16,9 @@ function App() {
   return (
     <>
       <h1>Contador Pomodoro</h1>
-      <span>{minutes}</span>
+      <span>{String(minutes).padStart(2, '0')}</span>
       <span>:</span>
-      <span>{seconds}</span>
+      <span>{String(seconds).padStart(2, '0')}</span>
     </>
   )
 }
